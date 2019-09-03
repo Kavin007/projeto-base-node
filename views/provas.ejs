@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Provas</title>
+</head>
+<body>
+        <ul class="nav justify-content-end">
+                <li class="nav-item">
+                     <a class="nav-link disabled" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/provas">Provas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/provas/nova">Nova Prova</a>
+                </li>
+
+              </ul>
+              <h1 class="d-flex justify-content-center">Lista de Provas</h1>
+    <div class="container" style="padding: 80px">
+        <table class="table">
+
+            <thead class="thead-dark">
+                <th scope="col" style="width: 20%"   >Disciplina</th>
+                <th scope="col" style="width: 20%">Professor</th>
+                <th scope="col" style="width: 20%">Data</th>
+            </thead>
+            <tbody>
+                <% for (let prova of provas) { %>
+                    <tr>
+                        <td><%= prova.disciplina %></td>
+                        <td><%= prova.professor %></td>
+                        <td><%= prova.dataProva %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <a href="/provas/nova"  class="btn btn-primary">Voltar</a>
+
+    </div>
+    
+</body>
+</html>
